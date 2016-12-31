@@ -20,8 +20,18 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
     var messagesTimeStamps = [Float]()
     
     
+    let userPhotoUrlRef = FIRDatabase.database().reference().child("Users").child(FirstViewController.messageTo_DisplayName).child("photoUrl")
+    
+    var userPhotoUrl: URL!
+    
+    var userPhoto: UIImage = UIImage()
+    
+    
+    
     
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
         
         
@@ -30,10 +40,13 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
         
         
         
+        
         navigationItem.title = FirstViewController.messageTo_DisplayName
         
+        //userPhotoUrl = (userPhotoUrlRef as! FIRDataSnapshot).value! as! URL
         
-        collectionView?.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 58, right: 0)
+        
+        collectionView?.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
         
         collectionView?.scrollIndicatorInsets = UIEdgeInsets (top: 8, left:  0, bottom: 50, right: 0)
         
@@ -41,13 +54,170 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
         
         collectionView?.register(ChatMessageCell.self, forCellWithReuseIdentifier: "cellId")
         
-        setupInputComponents()
+        //setupInputComponents()
         
         observeMessages()
+        
+        //setUpKeyboardObserver()
+        
+        
+        collectionView?.keyboardDismissMode = .interactive
         
         // Building the cell
         
     }
+    
+    
+    func setUpKeyboardObserver()
+    {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShow), name: .UIKeyboardWillShow, object: nil)
+        
+        //This is to bring the input view to the normal situation
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillHideNotification), name: .UIKeyboardWillHide, object: nil)
+        
+        
+        
+        
+    }
+    
+    
+    func handleKeyboardWillHideNotification(notification: NSNotification)
+    {
+        
+        let keyBoardDuration = ((notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey]) as! AnyObject).doubleValue
+        
+        
+        
+        containerViewBottomAnchor?.constant = 0
+        
+        
+        UIView.animate(withDuration: keyBoardDuration!)
+        {
+            
+            self.view.layoutIfNeeded()
+        }
+        
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self)
+        
+    }
+    
+    
+    lazy var inputContainterView: UIView =
+        {
+            let containerView = UIView()
+            containerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50)
+            
+            containerView.backgroundColor = UIColor.white
+            
+            
+            
+            
+            
+            
+            
+            // This code to add the button
+            let sendButton = UIButton(type: .system)
+            sendButton.setTitleColor(UIColor.orange, for: .normal)
+            sendButton.setTitle("Send", for: .normal)
+            sendButton.translatesAutoresizingMaskIntoConstraints = false
+            
+            sendButton.addTarget(self, action: #selector(handleSend), for: .touchUpInside)
+            
+            
+            containerView.addSubview(sendButton)
+            
+            //x,y,w,h
+            sendButton.rightAnchor.constraint(equalTo: containerView.rightAnchor).isActive = true
+            sendButton.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
+            sendButton.widthAnchor.constraint(equalToConstant: 80).isActive = true
+            sendButton.heightAnchor.constraint(equalTo: containerView.heightAnchor).isActive = true
+            
+            
+            self.inputTextField.textColor = UIColor.orange
+            self.inputTextField.placeholder = "Enter message..."
+            self.inputTextField.translatesAutoresizingMaskIntoConstraints = false
+            
+            
+            
+            containerView.addSubview(self.inputTextField)
+            //x,y,w,h
+            self.inputTextField.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 8).isActive = true
+            self.inputTextField.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
+            self.inputTextField.rightAnchor.constraint(equalTo: sendButton.leftAnchor).isActive = true
+            self.inputTextField.heightAnchor.constraint(equalTo: containerView.heightAnchor).isActive = true
+            
+            
+            
+            
+            
+            
+            return containerView
+            
+    }()
+    
+    
+    //This for make the keyboard hiding when scrolling down fellow
+    override var inputAccessoryView: UIView?
+        {
+        
+        get
+        {
+            
+            
+            return inputContainterView
+            
+            
+        }
+        
+        
+    }
+    
+    
+    override var canBecomeFirstResponder: Bool
+        {
+        
+        get
+        {
+            return true
+        }
+    }
+    
+    
+    
+    func handleKeyboardWillShow(notification: NSNotification)
+    {
+        let keyBoardFrame = ((notification.userInfo?[UIKeyboardFrameEndUserInfoKey]) as! AnyObject).cgRectValue
+        
+        
+        let keyBoardDuration = ((notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey]) as! AnyObject).doubleValue
+        
+        
+        
+        containerViewBottomAnchor?.constant = -keyBoardFrame!.height
+        
+        
+        UIView.animate(withDuration: keyBoardDuration!)
+        {
+            
+            self.view.layoutIfNeeded()
+        }
+        
+        
+        
+        // move the input area up somehow????
+        
+        
+        
+    }
+    
+    var containerViewBottomAnchor: NSLayoutConstraint?
     
     
     func setupInputComponents()
@@ -66,7 +236,9 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
         
         containerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         
-        containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        containerViewBottomAnchor = containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        
+        containerViewBottomAnchor?.isActive = true
         
         containerView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         
@@ -168,8 +340,13 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
                 }
             }
             
+            print ("reload the data again")
             self.collectionView?.reloadData()
+            
             self.inputTextField.text = nil
+            
+            // scroll to the last index
+            
             
         })
         
@@ -194,7 +371,7 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! ChatMessageCell
+        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! ChatMessageCell
         
         
         let message = messagesTexts[indexPath.row]
@@ -202,29 +379,38 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
         cell.textView.text = message
         
         //cell.backgroundColor = UIColor.orange
-    
+        
+        
+        //cell.profileImageView = userPhoto as! UIImageView
+        
+        
         
         if messagesFrom[indexPath.row] == ThirdViewController.displayName
         {
-            
-                // Will make the message orange
-             cell.bubbleView.backgroundColor = UIColor.orange
-             cell.textView.textColor = UIColor.white
+            // Will make the message orange
+            cell.bubbleView.backgroundColor = UIColor.orange
+            cell.textView.textColor = UIColor.white
+            cell.profileImageView.isHidden = true
+            cell.bubbleViewRightAnchor?.isActive = true
+            cell.bubbleViewLeftAnchor?.isActive = false
+            cell.bubbleWidthAnchor?.constant = estimateFrameForText(text: message).width + 32
             
         }
-        
+            
         else
         {
             
             // will make the message gray somehow.
             let color = hexStringToUIColor(hex: "E6E6E6")
             cell.textView.textColor = UIColor.black
+            cell.profileImageView.isHidden = false
             cell.bubbleView.backgroundColor = color
+            // This is to put the message to the right
+            cell.bubbleViewRightAnchor?.isActive = false
+            cell.bubbleViewLeftAnchor?.isActive = true
+            cell.bubbleWidthAnchor?.constant = estimateFrameForText(text: message).width + 32
             
         }
-        
-        
-        cell.bubbleWidthAnchor?.constant = estimateFrameForText(text: message).width + 32
         
         return cell
         
@@ -236,9 +422,9 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
         
         // get estimated height somehow??
         
-         let text = messagesTexts[indexPath.row]
+        let text = messagesTexts[indexPath.row]
         
-         height = estimateFrameForText(text: text).height + 20
+        height = estimateFrameForText(text: text).height + 20
         
         
         return CGSize(width: view.frame.width, height: height)
@@ -247,8 +433,8 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
     
     private func estimateFrameForText(text: String) -> CGRect
     {
-         let size = CGSize(width: 200, height: 1000)
-         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+        let size = CGSize(width: 200, height: 1000)
+        let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
         
         
         return NSString(string: text).boundingRect(with: size, options: options, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: 16)], context: nil)
@@ -289,4 +475,19 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
     }
     
     
+    // public func imageFromServerURL(urlString: String) {
+    
+    //   URLSession.shared.dataTask(with: NSURL(string: urlString)! as URL, completionHandler: { (data, response, error) -> Void in
+    
+    //     if error != nil {
+    //       print(error)
+    //     return
+    //}
+    //DispatchQueue.main.async(execute: { () -> Void in
+    //  let image = UIImage(data: data!)
+    //self.userPhoto = image!
+    //})
+    
+    //}).resume()
+    // }}
 }

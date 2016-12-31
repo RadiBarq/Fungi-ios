@@ -1,14 +1,14 @@
  //
-//  ChatMessageCell.swift
-//  pokemongotradcenterios
-//
-//  Created by Radi Barq on 12/30/16.
-//  Copyright © 2016 Radi Barq. All rights reserved.
-//
-
-import UIKit
-
-class ChatMessageCell: UICollectionViewCell {
+ //  ChatMessageCell.swift
+ //  pokemongotradcenterios
+ //
+ //  Created by Radi Barq on 12/30/16.
+ //  Copyright © 2016 Radi Barq. All rights reserved.
+ //
+ 
+ import UIKit
+ 
+ class ChatMessageCell: UICollectionViewCell {
     
     
     
@@ -23,16 +23,21 @@ class ChatMessageCell: UICollectionViewCell {
             textV.textColor = .white
             textV.isEditable = false
             return textV
-          
+            
     }()
     
     
     
     
-    let profileImageView: UIImageView =
+    var profileImageView: UIImageView =
         {
             let imagView = UIImageView()
-            imagView.image = UIImage(named: "profile")
+            imagView.image = UIImage(named: "profilepicture")
+            
+            imagView.translatesAutoresizingMaskIntoConstraints = false
+            imagView.layer.cornerRadius = 16
+            imagView.layer.masksToBounds = true
+            imagView.contentMode = .scaleAspectFill
             return imagView
     }()
     
@@ -41,7 +46,7 @@ class ChatMessageCell: UICollectionViewCell {
         
         let view = UIView()
         view.backgroundColor = UIColor.orange
-
+        
         view.translatesAutoresizingMaskIntoConstraints = false
         
         view.layer.cornerRadius = 16
@@ -52,8 +57,13 @@ class ChatMessageCell: UICollectionViewCell {
     }()
     
     
+    var bubbleViewRightAnchor: NSLayoutConstraint?
+    
+    var bubbleViewLeftAnchor: NSLayoutConstraint?
+    
     
     var bubbleWidthAnchor: NSLayoutConstraint?
+    
     
     
     override init(frame: CGRect)
@@ -66,32 +76,54 @@ class ChatMessageCell: UICollectionViewCell {
         
         addSubview(textView)
         
+        addSubview(profileImageView)
         
         
-        bubbleView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -8).isActive = true
-        bubbleWidthAnchor = bubbleView.widthAnchor.constraint(equalToConstant: 200)
-        bubbleWidthAnchor?.isActive = true
+        // This is for the profileImage
+        profileImageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8).isActive = true
+        profileImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        profileImageView.widthAnchor.constraint(equalToConstant: 32).isActive = true
+        profileImageView.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        
+        
+
+        
+        
+        
+        bubbleViewRightAnchor  = bubbleView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -8)
+         bubbleViewRightAnchor?.isActive = true
+        bubbleViewLeftAnchor = bubbleView.leftAnchor.constraint(equalTo: profileImageView.rightAnchor, constant: 8 )
+       
+        
+        //  bubbleViewLeftAnchor?.isActive = false
         
         bubbleView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        
+        
+        bubbleWidthAnchor = bubbleView.widthAnchor.constraint(equalToConstant: 200)
+        bubbleWidthAnchor?.isActive = true
+
         
         bubbleView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
 
         
+        
+        
         //textView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        textView.rightAnchor.constraint(lessThanOrEqualTo: bubbleView.rightAnchor).isActive = true
+        textView.rightAnchor.constraint(equalTo: bubbleView.rightAnchor).isActive = true
         textView.leftAnchor.constraint(equalTo: bubbleView.leftAnchor, constant: 8).isActive = true
         textView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        textView.widthAnchor.constraint(equalToConstant: 200).isActive = true
+       // textView.widthAnchor.constraint(equalToConstant: 200).isActive = true
         textView.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
         
         // ios9 constraitns x, y, w, h
         
-    }
+        }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-
     
-}
+    
+ }

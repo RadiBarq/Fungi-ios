@@ -19,6 +19,7 @@ class ThirdViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDeleg
     
     static var email = String()
     static var displayName = String()
+    static var userImage:URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +77,7 @@ class ThirdViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDeleg
         
             ThirdViewController.email = user!.email!
             ThirdViewController.displayName = user!.displayName!
+            ThirdViewController.userImage = user!.photoURL
             
             
             
