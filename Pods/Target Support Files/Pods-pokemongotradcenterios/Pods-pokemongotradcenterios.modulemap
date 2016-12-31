@@ -1,0 +1,6 @@
+framework module Pods_pokemongotradcenterios {
+  umbrella header "Pods-pokemongotradcenterios-umbrella.h"
+
+  export *
+  module * { export * }
+}
