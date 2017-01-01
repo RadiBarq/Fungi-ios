@@ -42,6 +42,16 @@ class AddPokemonViewController: UIViewController, UIPickerViewDelegate, UIPicker
 
         // Do any additional setup after loading the view.
         
+       
+        
+        
+        let buttonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+        
+        buttonItem.tintColor = UIColor.white
+        
+        navigationItem.leftBarButtonItem = buttonItem
+
+        
      
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.delegate = self
@@ -221,6 +231,18 @@ class AddPokemonViewController: UIViewController, UIPickerViewDelegate, UIPicker
         
     }
     
+   func handleLogout() {
+    
+    do {
+    try FIRAuth.auth()?.signOut()
+    } catch let logoutError {
+    print(logoutError)
+    }
+    
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let firstViewController = storyboard.instantiateViewController(withIdentifier: "ThirdViewController")
+    self.present(firstViewController, animated: true, completion: nil)
+    }
     
     
     /*

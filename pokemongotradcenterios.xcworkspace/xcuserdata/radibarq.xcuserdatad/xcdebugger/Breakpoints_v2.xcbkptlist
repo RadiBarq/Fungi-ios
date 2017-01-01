@@ -359,11 +359,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/AddPokemonViewController.swift"
-            timestampString = "504465073.783125"
+            timestampString = "504917004.541358"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "pickerView(_:didSelectRow:inComponent:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -375,11 +375,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/AddPokemonViewController.swift"
-            timestampString = "504465073.783125"
+            timestampString = "504917004.541358"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "AddPokemonViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -391,11 +391,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/AddPokemonViewController.swift"
-            timestampString = "504465073.783125"
+            timestampString = "504917004.541358"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "pickerView(_:titleForRow:forComponent:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -407,44 +407,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/AddPokemonViewController.swift"
-            timestampString = "504465660.352986"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
-            landmarkName = "locationManager(_:didUpdateLocations:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pokemongotradcenterios/AddPokemonViewController.swift"
-            timestampString = "504465660.352986"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
-            landmarkName = "locationManager(_:didUpdateLocations:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "pokemongotradcenterios/AddPokemonViewController.swift"
-            timestampString = "504465660.352986"
+            timestampString = "504917004.541358"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "219"
             endingLineNumber = "219"
-            landmarkName = "locationManager(_:didFailWithError:)"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -455,11 +423,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/AddPokemonViewController.swift"
-            timestampString = "504465660.352986"
+            timestampString = "504917004.541358"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "221"
             endingLineNumber = "221"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokemongotradcenterios/AddPokemonViewController.swift"
+            timestampString = "504917004.541358"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
             landmarkName = "locationManager(_:didFailWithError:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -471,11 +455,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/AddPokemonViewController.swift"
-            timestampString = "504465660.352986"
+            timestampString = "504917004.541358"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
+            startingLineNumber = "231"
+            endingLineNumber = "231"
+            landmarkName = "locationManager(_:didFailWithError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokemongotradcenterios/AddPokemonViewController.swift"
+            timestampString = "504917004.541358"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
             landmarkName = "locationManager(_:didFailWithError:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -487,11 +487,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/AddPokemonViewController.swift"
-            timestampString = "504465660.352986"
+            timestampString = "504917004.541358"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
             landmarkName = "buttonTrade(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -566,11 +566,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/AddPokemonViewController.swift"
-            timestampString = "504465660.352986"
+            timestampString = "504917004.541358"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "218"
+            endingLineNumber = "218"
             landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -582,11 +582,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/FirstViewController.swift"
-            timestampString = "504805743.989248"
+            timestampString = "504918589.806928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -598,11 +598,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/FirstViewController.swift"
-            timestampString = "504805743.989248"
+            timestampString = "504918589.806928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -614,11 +614,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/FirstViewController.swift"
-            timestampString = "504824283.657143"
+            timestampString = "504918589.806928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -630,11 +630,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/FirstViewController.swift"
-            timestampString = "504824283.657143"
+            timestampString = "504918589.806928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -769,11 +769,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/FirstViewController.swift"
-            timestampString = "504824283.657143"
+            timestampString = "504918589.806928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
             landmarkName = "popluateCells(s:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -785,11 +785,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/FirstViewController.swift"
-            timestampString = "504824283.657143"
+            timestampString = "504918589.806928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "popluateCells(s:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -801,11 +801,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/FirstViewController.swift"
-            timestampString = "504824283.657143"
+            timestampString = "504918589.806928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
             landmarkName = "popluateCells(s:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -817,11 +817,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/FirstViewController.swift"
-            timestampString = "504824283.657143"
+            timestampString = "504918589.806928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
             landmarkName = "popluateCells(s:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -833,11 +833,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/FirstViewController.swift"
-            timestampString = "504824283.657143"
+            timestampString = "504918589.806928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
             landmarkName = "popluateCells(s:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -849,11 +849,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/FirstViewController.swift"
-            timestampString = "504824283.657143"
+            timestampString = "504918589.806928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
             landmarkName = "popluateCells(s:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -865,11 +865,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/FirstViewController.swift"
-            timestampString = "504824283.657143"
+            timestampString = "504918589.806928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -881,11 +881,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/FirstViewController.swift"
-            timestampString = "504824283.657143"
+            timestampString = "504918589.806928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -897,11 +897,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "323"
-            endingLineNumber = "323"
+            startingLineNumber = "381"
+            endingLineNumber = "381"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -913,11 +913,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "315"
-            endingLineNumber = "315"
+            startingLineNumber = "373"
+            endingLineNumber = "373"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -929,11 +929,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "315"
-            endingLineNumber = "315"
+            startingLineNumber = "373"
+            endingLineNumber = "373"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -945,11 +945,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "327"
-            endingLineNumber = "327"
+            startingLineNumber = "385"
+            endingLineNumber = "385"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -961,11 +961,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "377"
-            endingLineNumber = "377"
+            startingLineNumber = "445"
+            endingLineNumber = "445"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -977,11 +977,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "372"
-            endingLineNumber = "372"
+            startingLineNumber = "440"
+            endingLineNumber = "440"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -993,11 +993,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/FirstViewController.swift"
-            timestampString = "504824283.657143"
+            timestampString = "504918589.806928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1009,11 +1009,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "315"
-            endingLineNumber = "315"
+            startingLineNumber = "373"
+            endingLineNumber = "373"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1025,11 +1025,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "313"
-            endingLineNumber = "313"
+            startingLineNumber = "371"
+            endingLineNumber = "371"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1041,11 +1041,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "268"
+            endingLineNumber = "268"
             landmarkName = "setupInputComponents()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1057,11 +1057,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
             landmarkName = "setupInputComponents()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1073,11 +1073,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "412"
-            endingLineNumber = "412"
+            startingLineNumber = "480"
+            endingLineNumber = "480"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1089,11 +1089,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "349"
-            endingLineNumber = "349"
+            startingLineNumber = "417"
+            endingLineNumber = "417"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1105,11 +1105,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "348"
-            endingLineNumber = "348"
+            startingLineNumber = "416"
+            endingLineNumber = "416"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1121,11 +1121,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "347"
-            endingLineNumber = "347"
+            startingLineNumber = "410"
+            endingLineNumber = "410"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1137,11 +1137,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "349"
-            endingLineNumber = "349"
+            startingLineNumber = "417"
+            endingLineNumber = "417"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1153,11 +1153,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "326"
-            endingLineNumber = "326"
+            startingLineNumber = "384"
+            endingLineNumber = "384"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1169,11 +1169,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "333"
-            endingLineNumber = "333"
+            startingLineNumber = "391"
+            endingLineNumber = "391"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1185,11 +1185,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "332"
-            endingLineNumber = "332"
+            startingLineNumber = "390"
+            endingLineNumber = "390"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1201,11 +1201,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "339"
-            endingLineNumber = "339"
+            startingLineNumber = "397"
+            endingLineNumber = "397"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1217,11 +1217,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "322"
-            endingLineNumber = "322"
+            startingLineNumber = "380"
+            endingLineNumber = "380"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1233,11 +1233,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "325"
-            endingLineNumber = "325"
+            startingLineNumber = "383"
+            endingLineNumber = "383"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1249,11 +1249,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "315"
-            endingLineNumber = "315"
+            startingLineNumber = "373"
+            endingLineNumber = "373"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1265,11 +1265,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "320"
-            endingLineNumber = "320"
+            startingLineNumber = "378"
+            endingLineNumber = "378"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1281,11 +1281,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "315"
-            endingLineNumber = "315"
+            startingLineNumber = "373"
+            endingLineNumber = "373"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1297,11 +1297,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "302"
-            endingLineNumber = "302"
+            startingLineNumber = "360"
+            endingLineNumber = "360"
             landmarkName = "observeMessages()"
             landmarkType = "7">
             <Locations>
@@ -1345,11 +1345,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "303"
-            endingLineNumber = "303"
+            startingLineNumber = "361"
+            endingLineNumber = "361"
             landmarkName = "observeMessages()"
             landmarkType = "7">
             <Locations>
@@ -1393,11 +1393,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "301"
-            endingLineNumber = "301"
+            startingLineNumber = "359"
+            endingLineNumber = "359"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1409,11 +1409,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/FirstViewController.swift"
-            timestampString = "504824861.199562"
+            timestampString = "504918589.806928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "popluateCells(s:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1425,11 +1425,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/FirstViewController.swift"
-            timestampString = "504824897.612359"
+            timestampString = "504918589.806928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "popluateCells(s:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1441,11 +1441,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/FirstViewController.swift"
-            timestampString = "504824935.526754"
+            timestampString = "504918589.806928"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
             landmarkName = "popluateCells(s:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1457,11 +1457,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "304"
-            endingLineNumber = "304"
+            startingLineNumber = "362"
+            endingLineNumber = "362"
             landmarkName = "observeMessages()"
             landmarkType = "7">
             <Locations>
@@ -1505,11 +1505,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "328"
-            endingLineNumber = "328"
+            startingLineNumber = "386"
+            endingLineNumber = "386"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1521,11 +1521,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "340"
-            endingLineNumber = "340"
+            startingLineNumber = "398"
+            endingLineNumber = "398"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1537,11 +1537,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "338"
-            endingLineNumber = "338"
+            startingLineNumber = "396"
+            endingLineNumber = "396"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1553,11 +1553,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "343"
-            endingLineNumber = "343"
+            startingLineNumber = "401"
+            endingLineNumber = "401"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1569,11 +1569,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "341"
-            endingLineNumber = "341"
+            startingLineNumber = "399"
+            endingLineNumber = "399"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1601,11 +1601,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "369"
-            endingLineNumber = "369"
+            startingLineNumber = "437"
+            endingLineNumber = "437"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1613,15 +1613,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "345"
-            endingLineNumber = "345"
+            startingLineNumber = "403"
+            endingLineNumber = "403"
             landmarkName = "observeMessages()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1649,11 +1649,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "417"
-            endingLineNumber = "417"
+            startingLineNumber = "485"
+            endingLineNumber = "485"
             landmarkName = "collectionView(_:layout:sizeForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1665,11 +1665,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "424"
-            endingLineNumber = "424"
+            startingLineNumber = "492"
+            endingLineNumber = "492"
             landmarkName = "collectionView(_:layout:sizeForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1681,11 +1681,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "489"
-            endingLineNumber = "489"
+            startingLineNumber = "557"
+            endingLineNumber = "557"
             landmarkName = "SendMessageViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -1697,11 +1697,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504925300.01206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "381"
-            endingLineNumber = "381"
+            startingLineNumber = "449"
+            endingLineNumber = "449"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1709,16 +1709,112 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504900362.300187"
+            timestampString = "504923631.320339"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "setUpKeyboardObserver()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokemongotradcenterios/SendMessageViewController.swift"
+            timestampString = "504925300.01206"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "236"
+            endingLineNumber = "236"
+            landmarkName = "handleKeyboardWillShow(notification:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokemongotradcenterios/FirstViewController.swift"
+            timestampString = "504918589.806928"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
+            landmarkName = "handleLogout()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokemongotradcenterios/SendMessageViewController.swift"
+            timestampString = "504923631.320339"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "handleKeyBoardDidShow(notification:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokemongotradcenterios/SendMessageViewController.swift"
+            timestampString = "504923631.320339"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "setUpKeyboardObserver()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokemongotradcenterios/SendMessageViewController.swift"
+            timestampString = "504923631.320339"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "handleKeyBoardDidShow(notification:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokemongotradcenterios/SendMessageViewController.swift"
+            timestampString = "504923631.320339"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "handleKeyBoardDidShow(notification:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1729,13 +1825,125 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pokemongotradcenterios/SendMessageViewController.swift"
-            timestampString = "504903796.849136"
+            timestampString = "504923631.320339"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
-            landmarkName = "handleKeyboardWillShow(notification:)"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "handleKeyBoardDidShow(notification:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokemongotradcenterios/SendMessageViewController.swift"
+            timestampString = "504923787.489644"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "setUpKeyboardObserver()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokemongotradcenterios/SendMessageViewController.swift"
+            timestampString = "504923838.024678"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "setUpKeyboardObserver()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokemongotradcenterios/SendMessageViewController.swift"
+            timestampString = "504923840.212492"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "setUpKeyboardObserver()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokemongotradcenterios/SendMessageViewController.swift"
+            timestampString = "504925300.01206"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
+            landmarkName = "inputContainterView"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokemongotradcenterios/SendMessageViewController.swift"
+            timestampString = "504925300.01206"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "SendMessageViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokemongotradcenterios/SendMessageViewController.swift"
+            timestampString = "504925300.01206"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "SendMessageViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokemongotradcenterios/SendMessageViewController.swift"
+            timestampString = "504925300.01206"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
+            landmarkName = "SendMessageViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

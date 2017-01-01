@@ -38,10 +38,20 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
         // Do any additional setup after loading the view.
         
         
-        
-        
-        
         navigationItem.title = FirstViewController.messageTo_DisplayName
+        
+
+        
+
+        
+       // navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleBack))
+        
+        
+        
+        
+        
+
+        
         
         //userPhotoUrl = (userPhotoUrlRef as! FIRDataSnapshot).value! as! URL
         
@@ -56,28 +66,40 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
         
         //setupInputComponents()
         
-        observeMessages()
         
-        //setUpKeyboardObserver()
+        
+       
         
         
         collectionView?.keyboardDismissMode = .interactive
+        
+         setUpKeyboardObserver()
+         observeMessages()
         
         // Building the cell
         
     }
     
     
+     
     func setUpKeyboardObserver()
     {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillShow), name: .UIKeyboardWillShow, object: nil)
+                     NotificationCenter.default.addObserver(self, selector: #selector(handleKeyBoardDidShow), name: .UIKeyboardWillChangeFrame, object: nil)
+    
+    }
+    
+    
+    func handleKeyBoardDidShow(notification: NSNotification)
+    {
+        let indexPath = NSIndexPath(item: self.messagesTexts.count - 1, section: 0)
         
-        //This is to bring the input view to the normal situation
-        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardWillHideNotification), name: .UIKeyboardWillHide, object: nil)
         
-        
-        
+        if self.messagesFrom.isEmpty == false
+        {
+            collectionView?.scrollToItem(at: indexPath as IndexPath, at: .top, animated: true)
+        }
+    
         
     }
     
@@ -119,9 +141,6 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
             
             
             
-            
-            
-            
             // This code to add the button
             let sendButton = UIButton(type: .system)
             sendButton.setTitleColor(UIColor.orange, for: .normal)
@@ -140,11 +159,28 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
             sendButton.heightAnchor.constraint(equalTo: containerView.heightAnchor).isActive = true
             
             
+            
+            
+            
             self.inputTextField.textColor = UIColor.orange
             self.inputTextField.placeholder = "Enter message..."
             self.inputTextField.translatesAutoresizingMaskIntoConstraints = false
             
             
+            
+            
+            
+            // This code for the separator
+            let seperatorLineView = UIView()
+            seperatorLineView.backgroundColor = self.hexStringToUIColor(hex: "E6E6E6")
+            seperatorLineView.translatesAutoresizingMaskIntoConstraints = false
+            containerView.addSubview(seperatorLineView)
+            seperatorLineView.leftAnchor.constraint(equalTo: containerView.leftAnchor).isActive = true
+            seperatorLineView.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
+            seperatorLineView.widthAnchor.constraint(equalTo: containerView.widthAnchor).isActive = true
+            seperatorLineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+            
+
             
             containerView.addSubview(self.inputTextField)
             //x,y,w,h
@@ -154,8 +190,14 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
             self.inputTextField.heightAnchor.constraint(equalTo: containerView.heightAnchor).isActive = true
             
             
+            let indexPath = NSIndexPath(item: self.messagesTexts.count - 1, section: 0)
             
             
+            if self.messagesFrom.isEmpty == false
+            {
+                self.collectionView?.scrollToItem(at: indexPath as IndexPath, at: .top, animated: true)
+            }
+
             
             
             return containerView
@@ -169,7 +211,6 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
         
         get
         {
-            
             
             return inputContainterView
             
@@ -207,7 +248,11 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
         {
             
             self.view.layoutIfNeeded()
+ 
         }
+        
+        
+        
         
         
         
@@ -277,7 +322,21 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
         inputTextField.rightAnchor.constraint(equalTo: sendButton.leftAnchor).isActive = true
         inputTextField.heightAnchor.constraint(equalTo: containerView.heightAnchor).isActive = true
         
+        
+        
+        // This code for the separator
+        let seperatorLineView = UIView()
+        seperatorLineView.backgroundColor = hexStringToUIColor(hex: "E6E6E6")
+        seperatorLineView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.addSubview(seperatorLineView)
+        seperatorLineView.leftAnchor.constraint(equalTo: containerView.leftAnchor).isActive = true
+        seperatorLineView.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
+        seperatorLineView.widthAnchor.constraint(equalTo: containerView.widthAnchor).isActive = true
+        seperatorLineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+
     }
+    
+    
     
     
     func handleSend()
@@ -345,8 +404,14 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
             
             self.inputTextField.text = nil
             
+            let indexPath = NSIndexPath(item: self.messagesTexts.count - 1, section: 0)
+            
             // scroll to the last index
             
+            if self.messagesFrom.isEmpty == false
+            {
+                self.collectionView?.scrollToItem(at: indexPath as IndexPath, at: .bottom, animated: true)
+            }
             
         })
         

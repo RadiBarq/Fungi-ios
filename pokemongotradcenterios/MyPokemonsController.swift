@@ -43,6 +43,14 @@ class MyPokemonsController: UITableViewController {
 
         
         
+        let buttonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+        
+        buttonItem.tintColor = UIColor.white
+        
+        navigationItem.leftBarButtonItem = buttonItem
+
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -171,7 +179,7 @@ class MyPokemonsController: UITableViewController {
                         images.popLast()
                         pokemons.popLast()
                         distances.popLast()
-                        
+                    
                         
                     }
                     
@@ -181,4 +189,23 @@ class MyPokemonsController: UITableViewController {
             
         }
     }
+    
+    
+    
+    func handleLogout() {
+        
+        do {
+            try FIRAuth.auth()?.signOut()
+        } catch let logoutError {
+            print(logoutError)
+        }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let firstViewController = storyboard.instantiateViewController(withIdentifier: "ThirdViewController")
+        self.present(firstViewController, animated: true, completion: nil)
+    }
+
+    
+    
+    
 }
