@@ -23,7 +23,6 @@
             textV.textColor = .white
             textV.isEditable = false
             return textV
-            
     }()
     
     

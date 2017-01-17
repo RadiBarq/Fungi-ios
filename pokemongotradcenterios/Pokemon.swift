@@ -11,30 +11,86 @@ import Firebase
 
 class Pokemon: NSObject
 {
-    var Pokemon = String()
-    var Cp = String()
-    var Location = String()
-    var  PublicName = String()
-    var pokemonDictionary = Dictionary<String, String>()
+    
+    private var pokemonName = String()
+    private var cp = String()
+    private var location = String()
+    private var  publicName = String()
+    public var pokemonDictionary = Dictionary<String, String>() // This is the public dictionary
+    private var pokemonImage = UIImage()
+    private var distance = Double()
+    
+    
+    
+    init (pokemon: String, cp: String, location: String, publicName: String, pokemonImage: UIImage)
+    {
+        self.pokemonName = pokemon
+        self.cp = cp
+        self.location = location
+        self.publicName = publicName
+        self.pokemonImage = pokemonImage
+    }
+    
     
     
     init (pokemon: String, cp: String, location: String, publicName: String)
     {
-        Pokemon = pokemon
-        Cp = cp
-        Location = location
-        PublicName = publicName
+        self.pokemonName = pokemon
+        self.cp = cp
+        self.location = location
+        self.publicName = publicName
         
-        
-        pokemonDictionary = ["Pokemon": Pokemon, "Cp":Cp, "Location":Location, "PublicName":PublicName]
+        pokemonDictionary = ["Pokemon": pokemon, "Cp":cp, "Location":location, "PublicName":publicName]
+    }
+    
+    
+    public func getPokemonName() -> String
+    {
+        return pokemonName
+    }
+    
+    
+    public func getPokemonCp() -> String
+    {
+        return cp
+    }
+    
+    
+    public func getPokemonLocation() -> String
+    {
+        return  location
         
     }
     
-    func returnDictionary() -> Dictionary<String, String>
+    public func getPublicName() -> String
+    {
+        return publicName
+    }
+    
+    public func getPokemonImage() -> UIImage
+    {
+        return pokemonImage
+    }
+    
+    public func returnDictionary() -> Dictionary<String, String>
     {
         return pokemonDictionary
         
     }
     
-
+    
+    func getDistance() -> Double
+    {
+        return distance
+        
+    }
+    
+    
+    func setDistance(d: Double)
+    {
+        
+        distance = d
+        
+    }
+    
 }

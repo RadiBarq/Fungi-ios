@@ -1,16 +1,18 @@
 //
-//  SendMessageViewController.swift
+//  SendMessage2CollectionViewController.swift
 //  pokemongotradcenterios
 //
-//  Created by Radi Barq on 12/30/16.
-//  Copyright © 2016 Radi Barq. All rights reserved.
+//  Created by Radi Barq on 1/2/17.
+//  Copyright © 2017 Radi Barq. All rights reserved.
 //
 
 import UIKit
 import Firebase
 import Foundation
 
-class SendMessageViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+
+class SendMessage2CollectionViewController: UICollectionViewController , UICollectionViewDelegateFlowLayout {
+    
     
     
     let inputTextField = UITextField()
@@ -23,29 +25,47 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
     let userPhotoUrlRef = FIRDatabase.database().reference().child("Users").child(FirstViewController.messageTo_DisplayName).child("photoUrl")
     
     
+    var notificationReference = FIRDatabase.database().reference().child("Users").child(FirstViewController.messageTo_DisplayName)
+    
+    
+    
+      
+    
+    
+    
     var userPhotoUrl: URL!
     
     var userPhoto: UIImage = UIImage()
     
-    var notificationReference = FIRDatabase.database().reference().child("Users").child(FirstViewController.messageTo_DisplayName)
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+      super.viewWillAppear(animated)
+
+
+    }
     
     
     override func viewDidLoad() {
         
+        
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyBoardDidShow(notification:)), name: .UIKeyboardDidShow, object: nil)
+
         
         // Do any additional setup after loading the view.
         
+        self.messagesTimeStamps = [Float]()
+        self.messagesTexts =  [String]()
+        self.messagesFrom = [String]()
+        
+        
         
         navigationItem.title = FirstViewController.messageTo_DisplayName
-        
-        
-        //  textFieldCp.addTarget(self, action: "addDoneButtonOnKeyboard", for: UIControlEvents.touchDown)
-        
-        
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyBoardDidShow(notification:)), name: .UIKeyboardDidShow, object: nil)
+    
         
         
         //userPhotoUrl = (userPhotoUrlRef as! FIRDataSnapshot).value! as! URL
@@ -62,6 +82,7 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
         //setupInputComponents()
         
         
+    
         
         collectionView?.keyboardDismissMode = .interactive
         
@@ -75,10 +96,28 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
     
     
     
+    override init(collectionViewLayout layout: UICollectionViewLayout) {
+        super.init(collectionViewLayout: layout)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    func handleBackButton()
+    {
+        
+        
+        
+        
+    }
+    
     
     func setUpKeyboardObserver()
     {
         
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyBoardDidShow), name: .UITextFieldTextDidBeginEditing, object: nil)
         
     }
     
@@ -119,8 +158,6 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        //  NotificationCenter.default.removeObserver(self)
-        
     }
     
     
@@ -130,6 +167,7 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
             containerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50)
             
             containerView.backgroundColor = UIColor.white
+            
             
             
             // This code to add the button
@@ -216,7 +254,7 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
         }
     }
     
-    
+
     
     func handleKeyboardWillShow(notification: NSNotification)
     {
@@ -237,7 +275,9 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
             
         }
         
-        // move the input area up somehow???
+        
+        // move the input area up somehow??
+        
     }
     
     var containerViewBottomAnchor: NSLayoutConstraint?
@@ -301,6 +341,7 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
         inputTextField.heightAnchor.constraint(equalTo: containerView.heightAnchor).isActive = true
         
         
+        
         // This code for the separator
         let seperatorLineView = UIView()
         seperatorLineView.backgroundColor = hexStringToUIColor(hex: "E6E6E6")
@@ -314,17 +355,18 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
     }
     
     
+    
+    
     func handleSend()
     {
-        
         let timestamp = Int(NSDate().timeIntervalSince1970)
         
         let ref = FIRDatabase.database().reference().child("Users").child(ThirdViewController.displayName).child("chat").child(FirstViewController.messageTo_DisplayName).childByAutoId().updateChildValues(["messageText": inputTextField.text, "messageFrom": ThirdViewController.displayName, "timestamp": timestamp])
         
-        
         let ref2 = FIRDatabase.database().reference().child("Users").child(FirstViewController.messageTo_DisplayName).child("chat").child(ThirdViewController.displayName).childByAutoId().updateChildValues(["messageText": inputTextField.text, "messageFrom": ThirdViewController.displayName, "timestamp": timestamp])
         
         notificationReference.updateChildValues(["notified": true])
+
         
     }
     
@@ -335,10 +377,7 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
         let ovserveReference = FIRDatabase.database().reference().child("Users").child(ThirdViewController.displayName).child("chat").child(FirstViewController.messageTo_DisplayName)
         
         
-        
         ovserveReference.observe(.value, with: {snapshot in
-            
-            
             
             self.messagesTimeStamps = [Float]()
             self.messagesTexts =  [String]()
@@ -347,7 +386,6 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
             
             for messages in snapshot.children
             {
-                
                 
                 for  message in (messages as! FIRDataSnapshot).children
                 {
@@ -418,7 +456,10 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
         
         //cell.backgroundColor = UIColor.orange
         
+        
         //cell.profileImageView = userPhoto as! UIImageView
+        
+        
         
         if messagesFrom[indexPath.row] == ThirdViewController.displayName
         {
@@ -429,10 +470,12 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
             cell.bubbleViewRightAnchor?.isActive = true
             cell.bubbleViewLeftAnchor?.isActive = false
             cell.bubbleWidthAnchor?.constant = estimateFrameForText(text: message).width + 32
+            
         }
             
         else
         {
+            
             // will make the message gray somehow.
             let color = hexStringToUIColor(hex: "E6E6E6")
             cell.textView.textColor = UIColor.black
@@ -442,9 +485,11 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
             cell.bubbleViewRightAnchor?.isActive = false
             cell.bubbleViewLeftAnchor?.isActive = true
             cell.bubbleWidthAnchor?.constant = estimateFrameForText(text: message).width + 32
+            
         }
         
         return cell
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -468,6 +513,7 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
         
         
         return NSString(string: text).boundingRect(with: size, options: options, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: 16)], context: nil)
+        
     }
     
     /*
@@ -504,6 +550,7 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
     
     override func didMove(toParentViewController parent: UIViewController?) {
         if (!(parent?.isEqual(self.parent) ?? false)) {
+            
             self.messagesTimeStamps = [Float]()
             self.messagesTexts =  [String]()
             self.messagesFrom = [String]()
@@ -513,10 +560,6 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        self.messagesTimeStamps = [Float]()
-        self.messagesTexts =  [String]()
-        self.messagesFrom = [String]()
         
         
     }
@@ -535,5 +578,7 @@ class SendMessageViewController: UICollectionViewController, UICollectionViewDel
     //})
     
     //}).resume()
-    // }}
+
+    
+    
 }

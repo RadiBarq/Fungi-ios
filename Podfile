@@ -6,7 +6,7 @@ target 'pokemongotradcenterios' do
   use_frameworks!
 
   # Pods for pokemongotradcenterios
-	
+
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
@@ -15,5 +15,8 @@ target 'pokemongotradcenterios' do
   pod 'Firebase/Database’
   pod 'Firebase/Crash'
   pod 'Firebase/Storage’
+  pod 'Firebase/Database'
   pod ‘Google’
+  pod 'GeoFire', :git => 'https://github.com/firebase/geofire-objc.git'
+
 end

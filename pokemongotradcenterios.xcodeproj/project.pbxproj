@@ -11,10 +11,13 @@
 		CD0FB6731E12AFCE001257A9 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0FB6721E12AFCE001257A9 /* CustomCell.swift */; };
 		CD0FB6771E12EECC001257A9 /* MyPokemonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0FB6761E12EECC001257A9 /* MyPokemonsController.swift */; };
 		CD0FB6791E130670001257A9 /* CustomCellMyPokemons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0FB6781E130670001257A9 /* CustomCellMyPokemons.swift */; };
+		CD17AADA1E19425100E01E44 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD17AAD91E19425100E01E44 /* MessagesViewController.swift */; };
 		CD18BD681E10AC1F00C29972 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD18BD671E10AC1F00C29972 /* Pokemon.swift */; };
 		CD18BD6A1E11B27100C29972 /* PopulatePokemons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD18BD691E11B27100C29972 /* PopulatePokemons.swift */; };
 		CD2DE5EA1E16E02400899AFD /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2DE5E91E16E02400899AFD /* Message.swift */; };
 		CD2DE5EC1E170FDD00899AFD /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2DE5EB1E170FDD00899AFD /* ChatMessageCell.swift */; };
+		CD3C42C41E1AD98B0063561B /* SendMessage2CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3C42C31E1AD98B0063561B /* SendMessage2CollectionViewController.swift */; };
+		CD8294FE1E253C10001AF98F /* tabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8294FD1E253C10001AF98F /* tabBarViewController.swift */; };
 		CDADF0831E0C6D39000C2927 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDADF0821E0C6D39000C2927 /* AppDelegate.swift */; };
 		CDADF0851E0C6D39000C2927 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDADF0841E0C6D39000C2927 /* FirstViewController.swift */; };
 		CDADF0871E0C6D39000C2927 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDADF0861E0C6D39000C2927 /* SecondViewController.swift */; };
@@ -25,6 +28,7 @@
 		CDC01E811E0DB783001470E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDC01E801E0DB783001470E4 /* GoogleService-Info.plist */; };
 		CDC01E831E0F40F4001470E4 /* AddPokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC01E821E0F40F4001470E4 /* AddPokemonViewController.swift */; };
 		CDC01E851E0F46D2001470E4 /* pokemonsNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC01E841E0F46D2001470E4 /* pokemonsNames.swift */; };
+		CDCEB7111E22AFFB00F5CF2B /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEB7101E22AFFB00F5CF2B /* SplashScreenViewController.swift */; };
 		CDE338981E15C6DC00F97E48 /* SendMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE338971E15C6DC00F97E48 /* SendMessageViewController.swift */; };
 		CDF0A0CF1E14E5EC00DF1269 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF0A0CE1E14E5EC00DF1269 /* ChatLogController.swift */; };
 /* End PBXBuildFile section */
@@ -35,10 +39,13 @@
 		CD0FB6721E12AFCE001257A9 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCell.swift; path = ../CustomCell.swift; sourceTree = "<group>"; };
 		CD0FB6761E12EECC001257A9 /* MyPokemonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPokemonsController.swift; sourceTree = "<group>"; };
 		CD0FB6781E130670001257A9 /* CustomCellMyPokemons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellMyPokemons.swift; sourceTree = "<group>"; };
+		CD17AAD91E19425100E01E44 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		CD18BD671E10AC1F00C29972 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		CD18BD691E11B27100C29972 /* PopulatePokemons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopulatePokemons.swift; sourceTree = "<group>"; };
 		CD2DE5E91E16E02400899AFD /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		CD2DE5EB1E170FDD00899AFD /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
+		CD3C42C31E1AD98B0063561B /* SendMessage2CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessage2CollectionViewController.swift; sourceTree = "<group>"; };
+		CD8294FD1E253C10001AF98F /* tabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tabBarViewController.swift; sourceTree = "<group>"; };
 		CDADF07F1E0C6D39000C2927 /* pokemongotradcenterios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokemongotradcenterios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDADF0821E0C6D39000C2927 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDADF0841E0C6D39000C2927 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +58,7 @@
 		CDC01E801E0DB783001470E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CDC01E821E0F40F4001470E4 /* AddPokemonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPokemonViewController.swift; sourceTree = "<group>"; };
 		CDC01E841E0F46D2001470E4 /* pokemonsNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pokemonsNames.swift; sourceTree = "<group>"; };
+		CDCEB7101E22AFFB00F5CF2B /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		CDE338971E15C6DC00F97E48 /* SendMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessageViewController.swift; sourceTree = "<group>"; };
 		CDF0A0CE1E14E5EC00DF1269 /* ChatLogController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
 		D426578F94882BD1E338C43A /* Pods-pokemongotradcenterios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pokemongotradcenterios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pokemongotradcenterios/Pods-pokemongotradcenterios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +126,10 @@
 				CDE338971E15C6DC00F97E48 /* SendMessageViewController.swift */,
 				CD2DE5E91E16E02400899AFD /* Message.swift */,
 				CD2DE5EB1E170FDD00899AFD /* ChatMessageCell.swift */,
+				CD17AAD91E19425100E01E44 /* MessagesViewController.swift */,
+				CD3C42C31E1AD98B0063561B /* SendMessage2CollectionViewController.swift */,
+				CDCEB7101E22AFFB00F5CF2B /* SplashScreenViewController.swift */,
+				CD8294FD1E253C10001AF98F /* tabBarViewController.swift */,
 			);
 			path = pokemongotradcenterios;
 			sourceTree = "<group>";
@@ -257,7 +269,10 @@
 			files = (
 				CDF0A0CF1E14E5EC00DF1269 /* ChatLogController.swift in Sources */,
 				CD18BD681E10AC1F00C29972 /* Pokemon.swift in Sources */,
+				CDCEB7111E22AFFB00F5CF2B /* SplashScreenViewController.swift in Sources */,
 				CDC01E851E0F46D2001470E4 /* pokemonsNames.swift in Sources */,
+				CD8294FE1E253C10001AF98F /* tabBarViewController.swift in Sources */,
+				CD3C42C41E1AD98B0063561B /* SendMessage2CollectionViewController.swift in Sources */,
 				CDC01E831E0F40F4001470E4 /* AddPokemonViewController.swift in Sources */,
 				CDADF0871E0C6D39000C2927 /* SecondViewController.swift in Sources */,
 				CD0FB6731E12AFCE001257A9 /* CustomCell.swift in Sources */,
@@ -269,6 +284,7 @@
 				CDE338981E15C6DC00F97E48 /* SendMessageViewController.swift in Sources */,
 				CD18BD6A1E11B27100C29972 /* PopulatePokemons.swift in Sources */,
 				CD0FB6771E12EECC001257A9 /* MyPokemonsController.swift in Sources */,
+				CD17AADA1E19425100E01E44 /* MessagesViewController.swift in Sources */,
 				CD2DE5EA1E16E02400899AFD /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +409,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PSFCZBNLMD;
 				INFOPLIST_FILE = pokemongotradcenterios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.radibarq.pokemongotradecenter.ios.pokemongotradcenterios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -407,6 +424,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PSFCZBNLMD;
 				INFOPLIST_FILE = pokemongotradcenterios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.radibarq.pokemongotradecenter.ios.pokemongotradcenterios;
 				PRODUCT_NAME = "$(TARGET_NAME)";

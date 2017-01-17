@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import CoreLocation
+import GeoFire
 
 
 
@@ -17,13 +18,8 @@ import CoreLocation
 
 class AddPokemonViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate{
     
-     @IBOutlet weak var picker: UIPickerView!
-
-    var locationManager: CLLocationManager = CLLocationManager()
-    
-    var startLocation: CLLocation!
-    
-    var stringLocation = String()
+    @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet weak var cpTextField: UITextField!
     
     @IBOutlet weak var textFieldCp: UITextField!
     
@@ -33,16 +29,17 @@ class AddPokemonViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     var ref: FIRDatabaseReference!
     
-   
+    var chosenPokemon = "Bulbasaur"
     
-     var chosenPokemon = "Bulbasaur"
-
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
-       
+        textFieldCp.addTarget(self, action: "addDoneButtonOnKeyboard", for: UIControlEvents.touchDown)
         
         
         let buttonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
@@ -50,39 +47,34 @@ class AddPokemonViewController: UIViewController, UIPickerViewDelegate, UIPicker
         buttonItem.tintColor = UIColor.white
         
         navigationItem.leftBarButtonItem = buttonItem
-
         
-     
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-        startLocation = nil
-
-        
+    
         pickerData = pokemonsNames.getPokomensNames()
         
         picker.dataSource = self
         picker.delegate = self
         
         
-         ref = FIRDatabase.database().reference()
-        
-        
+        ref = FIRDatabase.database().reference()
     }
-
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-        @available(iOS 2.0, *)
+    
+    
+    @available(iOS 2.0, *)
     public func numberOfComponents(in pickerView: UIPickerView) -> Int
-        {
-            
-            return 1;
-            
+    {
+        
+        return 1;
+        
     }
+    
     
     
     @available(iOS 2.0, *)
@@ -92,13 +84,17 @@ class AddPokemonViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
     
     
+    
+    
     @available(iOS 2.0, *)
-     public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
     {
         
-            return pickerData[row]
+        return pickerData[row]
         
     }
+    
+    
     
     
     // This is when the user select a row
@@ -109,7 +105,8 @@ class AddPokemonViewController: UIViewController, UIPickerViewDelegate, UIPicker
         chosenPokemon = pickerData[row]
         
     }
-
+    
+    
     
     
     @IBAction func buttonTrade(_ sender: UIButton) {
@@ -125,17 +122,16 @@ class AddPokemonViewController: UIViewController, UIPickerViewDelegate, UIPicker
         if (cp == "")
         {
             present(alertController, animated: true, completion: nil)
-   
+            
         }
-        
+            
         else
         {
             if (rightCp(number: Int(cp)!) == true)
             {
                 //TODO firebase wor
-                
                 // This is when getting the location failed.
-                if stringLocation == ""
+                if FirstViewController.stringLocation == ""
                 {
                     let alertController = UIAlertController(title: "Location Problem!", message: "Please check your location service and try again", preferredStyle: .alert)
                     
@@ -145,25 +141,23 @@ class AddPokemonViewController: UIViewController, UIPickerViewDelegate, UIPicker
                     
                     present(alertController, animated: true, completion: nil)
                     
-
                 }
-                
-                 // This is when everything works well
+                    
+                    // This is when everything works well
                 else
                 {
-                    addNewUser(pokemon: chosenPokemon, cp: cp, location: stringLocation, publicName: ThirdViewController.displayName)
+                    // This is awsome
+                    addNewUser(pokemon: chosenPokemon, cp: cp, location: FirstViewController.stringLocation, publicName: ThirdViewController.displayName)
                 }
             }
-            
+                
             else
             {
                 present(alertController, animated: true, completion: nil)
-
+                
             }
             
         }
-        
-        
     }
     
     func rightCp(number: Int) -> Bool
@@ -172,9 +166,8 @@ class AddPokemonViewController: UIViewController, UIPickerViewDelegate, UIPicker
         if number <= 0 || number >= 5000
         {
             return false
-        
-        }
             
+        }
             
             
         else
@@ -184,15 +177,44 @@ class AddPokemonViewController: UIViewController, UIPickerViewDelegate, UIPicker
         
     }
     
-    
-    
     func addNewUser(pokemon: String, cp: String, location: String, publicName: String)
     {
         
         let pokemon = Pokemon(pokemon: pokemon, cp: cp, location: location, publicName: publicName)
-       
-        self.ref.child("Pokemons").childByAutoId().setValue(pokemon.pokemonDictionary)
         
+        ref = ref.child("Pokemons").childByAutoId()
+        
+        var autoId = ref.key
+        
+        var userRefrence = FIRDatabase.database().reference().child("Users").child(ThirdViewController.displayName).child("pokemons").child(autoId)
+        
+        ref.setValue(pokemon.pokemonDictionary)
+        userRefrence.setValue(pokemon.pokemonDictionary)
+
+        
+        let geofireRef = FIRDatabase.database().reference().child("Pokemons Location")
+        let geoFire = GeoFire(firebaseRef: geofireRef)
+        
+        
+        ref = FIRDatabase.database().reference()
+        
+        
+        var userCoordinates = location.components(separatedBy: " ")
+        
+        var lat = CLLocationDegrees(userCoordinates[0])!
+        var lon = CLLocationDegrees(userCoordinates[1])!
+        
+        
+        geoFire?.setLocation(CLLocation(latitude: lat, longitude: lon), forKey: autoId)
+        { (error) in
+            
+            if error != nil {
+                print("An error occured: \(error)")
+            } else {
+                print("Saved location successfully!")
+            }
+            
+        }
         
         
         // And this is to present the alert view
@@ -211,48 +233,55 @@ class AddPokemonViewController: UIViewController, UIPickerViewDelegate, UIPicker
         
     }
     
-    @available(iOS 6.0, *)
-     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations:[CLLocation])
+        func handleLogout() {
+        
+        do {
+            try FIRAuth.auth()?.signOut()
+        } catch let logoutError {
+            print(logoutError)
+        }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let firstViewController = storyboard.instantiateViewController(withIdentifier: "ThirdViewController")
+        self.present(firstViewController, animated: true, completion: nil)
+    }
+    
+    func addDoneButtonOnKeyboard()
     {
-        let latestLocation: CLLocation = locations[locations.count - 1]
+        let doneToolbar: UIToolbar = UIToolbar(frame:  CGRect(x: 0, y: 0, width: 320, height: 50))
         
-        stringLocation = String(latestLocation.coordinate.latitude)  + " " + String(latestLocation.coordinate.longitude)
-    
-        print (stringLocation)
+        doneToolbar.barStyle = UIBarStyle.default
         
+        var flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        var done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(doneButtonAction))
+        
+        done.tintColor = UIColor.orange
+        
+        var items = [UIBarButtonItem]()
+        items.append(done)
+        items.append(flexSpace)
+        
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        
+        self.textFieldCp.inputAccessoryView = doneToolbar
     }
-
-   
-    @available(iOS 2.0, *)
-    public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
+    
+    
+    func doneButtonAction()
     {
         
-        print("Location Error happened here")
-        
+        self.textFieldCp.resignFirstResponder()
     }
-    
-   func handleLogout() {
-    
-    do {
-    try FIRAuth.auth()?.signOut()
-    } catch let logoutError {
-    print(logoutError)
-    }
-    
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let firstViewController = storyboard.instantiateViewController(withIdentifier: "ThirdViewController")
-    self.present(firstViewController, animated: true, completion: nil)
-    }
-    
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
